@@ -1,0 +1,47 @@
+<div class="row">
+	<br>
+	<br>
+	<br>
+	<div class="center">
+    	<div class="card bordered z-depth-2 login-inee">
+        	<div class="card-header">
+           	 <div class="brand-logo"><img src="img/inee-logo.png" alt="INEE" class="login-logo img-responsive"></div>
+        </div>
+        <div class="card-content">
+            <div class="m-b-30">
+                <div class="card-title strong">Bienvenido</div>
+                <p class="card-title-desc"> Platilla del INEE</p>
+            </div>
+            <form class="form-floating" ng-submit="login()">
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label normal">Usuario</label>
+                    <input type="text" class="form-control" ng-model="usuario" required>
+                    <b class="tooltip tooltip-top-right">
+                        <i class="fa fa-lock txt-color-teal"></i>
+                        Ingrese contraseña
+                    </b>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="control-label normal">Contraseña</label>
+                    <input type="password" class="form-control" id="inputPassword" ng-required="true" ng-model="password">
+                </div>
+                <div class="card-action clearfix">
+                    <div class="row">
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+     <div class="row text-center login-inee p-15">
+        <p>Para un mejor funcionamiento del sistema, se recomienda descargar Google Chrome o Mozilla Firefox.</p>
+        <p>
+            <a href="https://www.google.com.mx/chrome/browser/desktop/" target="_blank"><i class="fa fa-2x fa-chrome" aria-hidden="true"></i></a>
+            <a href="https://www.mozilla.org/es-MX/firefox/new/" target="_blank"><i class="fa fa-2x fa-firefox" aria-hidden="true"></i></a>
+        </p>
+    </div>
+</div>
+
+</div>

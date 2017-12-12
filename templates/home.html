@@ -1,0 +1,154 @@
+ 
+<div class="row">
+    <div class="col-md-2">
+        <aside class="sidebar fixed">
+            <div class="brand-logo grey lighten-3">
+                <img src="img/inee-logo-simple.png" title="INEE" class="img-responsive">
+            </div>
+            <div class="user-logged-in">
+                <div class="content">
+                    <div class="user-name">{{usuarioCookie}}</div>
+                    <div class="user-email">{{usuarioCookie}}@DOMINIO.COM</div>
+                    <div class="user-actions pull-right">
+                        <a href="" ng-click="logout()">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu-links" ng-cloak>
+                <a menu-link href="#!/" icon="md md-blur-on">Bienvenidos</a>
+                <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Nueva inconformidad</a>
+            </ul><!-- 
+            <div class="row col-md-12 text-center">
+                <span>Versión<strong>{{mc.version}}</strong></span>
+            </div> -->
+        </aside>
+    </div>
+    <div class="col-md-10">
+        <ul class="breadcrumb">
+            <li><a href="">INEE</a></li>
+            <li>Bienvenidos</li>
+        </ul>
+    	<section>
+            <h1>Sistema de inconformidades</h1>
+            <br>
+                <div class="row">
+                    <div class="well white">
+                        <div class="page-header">
+                            <h1>
+                  <i class="material-icons">list</i>
+                  Consulta de inconformidades
+                </h1>
+                            <p class="lead">
+                                This is an example how to display table data and default actions you can use.
+                            </p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-full table-full-small table-striped">
+                                <colgroup>
+                                    <col class="auto-cell-size" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Expediente</th>
+                                        <th class="text-center">Fecha de escrito</th>
+                                        <th class="text-center">Área responsable</th>
+                                        <th class="text-center">Abogado responsable</th>
+                                        <th class="text-center">Etapa/Estado</th>
+                                        <th class="text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1854785</td>
+                                        <td>11/22/3333</td>
+                                        <td>Dirección General de informatica y Servicios Técnicos</td>
+                                        <td class="text-center">Sandro Diego Bárcena García</td>
+                                        <td class="text-center">
+                                            <div class="col-xs-12">
+                                                <i class="md md-filter-1 size-big"></i>
+                                                <i class="md md-filter-2 size-big"></i>
+                                                <i class="md md-filter-3 size-huge text-info"></i>
+                                                <i class="md md-filter-4 size-big text-muted"></i>
+                                                <i class="md md-filter-5 size-big text-muted"></i>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%;"></div>
+                                                </div>
+                                                <p class="text-info small no-margin">10 días restantes</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1854785</td>
+                                        <td>11/22/3333</td>
+                                        <td>Dirección General de informatica y Servicios Técnicos</td>
+                                        <td class="text-center">Sandro Diego Bárcena García</td>
+                                        <td class="text-center">
+                                            <div class="col-xs-12">
+                                                <i class="md md-filter-1 size-big"></i>
+                                                <i class="md md-filter-2 size-huge text-warning"></i>
+                                                <i class="md md-filter-3 size-big text-muted"></i>
+                                                <i class="md md-filter-4 size-big text-muted"></i>
+                                                <i class="md md-filter-5 size-big text-muted"></i>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 90%;"></div>
+                                                </div>
+                                                <p class="text-warning small no-margin">3 días restantes</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1854785</td>
+                                        <td>11/22/3333</td>
+                                        <td>Dirección General de informatica y Servicios Técnicos</td>
+                                        <td class="text-center">Sandro Diego Bárcena García</td>
+                                        <td class="text-center">
+                                            <div class="col-xs-12">
+                                                <i class="md md-filter-1 size-big"></i>
+                                                <i class="md md-filter-2 size-big"></i>
+                                                <i class="md md-filter-3 size-big"></i>
+                                                <i class="md md-filter-4 size-big"></i>
+                                                <i class="md md-filter-5 size-huge text-danger"></i>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 100%;"></div>
+                                                </div>
+                                                <p class="text-danger small no-margin">5 días de atraso</p>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                            <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="p-t-20">
+                                <span class="help-block text-right">
+                                    <i class="material-icons">edit</i> Editar |
+                                    <i class="material-icons">visibility</i> Detalles |
+                                    <i class="material-icons">delete</i> Eliminar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+</div>
