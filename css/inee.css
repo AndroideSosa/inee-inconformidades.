@@ -8,6 +8,14 @@ Contraste 2:; #FF7940
 Contraste 3:; #CC3114
 */
 
+section {
+    margin: 10px 30px;
+}
+
+.main-container {
+    padding-left: 260px;
+}
+
 article,
 aside,
 details,

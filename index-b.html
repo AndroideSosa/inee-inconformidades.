@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="INEE" ng-controller="mainCtrl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>INEE</title>
+
+    	<!-- Incluir estilos -->
+
+    	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+  		<link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+  		<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+  		<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+
+		<!-- Incluir AngularJS -->
+    	<script src="lib/angular.min.js"></script>    
+    	<!-- Incluir Angular-Route -->
+		<script src="lib/angular-route.min.js"></script>
+    	<!-- Incluir datePicker -->
+		<script src="lib/angularjs-datetime-picker.js"></script>
+		<link rel="stylesheet" href="lib/angularjs-datetime-picker.css">
+		<!-- Incluir Angular Cookies -->
+		<script src="lib/angular-cookies.min.js"></script>
+
+		<!-- Incluir Bootstrap -->
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Inluir materialism-->
+		<link rel="stylesheet" href="css/materialism.css">
+		<!-- Incluir helpers.css -->
+		<link rel="stylesheet" href="css/helpers.css">
+		<!-- Incluir inee.css -->
+		<link rel="stylesheet" href="css/inee.css">
+		<!-- Incluir ripples.css -->
+		<link rel="stylesheet" href="css/ripples.css">
+		<!-- Incluir slsect2.css -->
+		<link rel="stylesheet" href="css/select2.css">
+		<!-- Incluir estilos -->
+		<link href="css/materialism.css" rel="stylesheet" />
+		<link href="css/angular-ui-select.css" rel="stylesheet" />
+		<link href="css/helpers.css" rel="stylesheet" />
+		<link href="css/ripples.css" rel="stylesheet" />
+		<link href="css/inee.css" rel="stylesheet" type="text/css"/>
+		<!-- Importar iconos -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Incluir SweetAlert -->
+		<script src="lib/sweetalert.min.js"></script>
+		<!-- Incluir SweetAlert2 -->
+		<script src="lib/sweetalert2.min.js"></script>
+		<link rel="stylesheet" href="lib/sweetalert2.min.css">
+
+		<!-- Incluir JQuery. -->
+	 	<script src="lib/jquery-3.2.1.min.js"> </script>
+	    <script src="lib/bootstrap.min.js"></script>
+
+		<!-- Incluir Controlador Principal -->
+		<script src="js/app.js"></script>
+		<!-- Incluir Archivo de configuracion -->
+		<script src="js/config.js"></script>
+
+		<!-- Controladores de páginas -->
+		<script src="js/js_htmls/loginCtrl.js"></script>
+		<script src="js/js_htmls/homeCtrl.js"></script>
+		<script src="js/js_htmls/inconformidadCtrl.js"></script>
+
+	</head>	
+	
+	<body>
+
+		<div class="container">
+		<!-- La página principal irá aquí -->
+
+		<div ng-view></div>
+
+	</div>
+
+
+	</body>
+</html>
