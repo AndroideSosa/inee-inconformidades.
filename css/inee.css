@@ -1,0 +1,611 @@
+/* 
+INEE-SEPI
+Color base: #02153B;
+Color Base Oscuro: #000A28;
+Color secundario: #3D5C99;
+Contraste 1:; #00DBFF
+Contraste 2:; #FF7940
+Contraste 3:; #CC3114
+*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+.blue.inee {
+    background-color: #141B4D;
+    color: #ffffff;
+}
+
+.page-login {
+    background: transparent;
+}
+
+.login-inee {
+    margin: 0% auto;
+    max-width: 400px;
+}
+
+.login-logo {
+    margin: 0% auto;
+    max-height: 100px;
+}
+
+.balance-ponderacion {
+    font-size: 40px;
+}
+
+.balance-ponderacion-tabla {
+    font-size: 20px;
+}
+
+select,
+select.form-control.table-select {
+    font-size: 11px;
+}
+
+.table-form-select {
+    margin-bottom: 0px;
+}
+
+.table-100 {
+    min-width: 100px;
+}
+
+.indigo h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* Add flexbox settings */
+
+.grid {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.grid-item {
+    margin-bottom: 2em;
+    display: -webkit-flex;
+    display: flex;
+    align-items: stretch;
+    flex: 0 1 auto;
+}
+
+
+/* END flexbox settings */
+
+.factores-factor {
+    width: 100%;
+}
+
+.factores-dimension {
+    width: 100%;
+}
+
+.factores-reactivo {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.factores-paginador {
+    width: 100%;
+}
+
+.factores-radio {
+    font-size: 12px;
+}
+
+.factores-rasgo {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.factores-rol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-head-bg {
+    height: 70px;
+}
+
+.current-version {
+    font-size: 12px;
+    padding-top: 9px;
+}
+
+.pager-number {
+    font-size: 16px;
+    padding: 5px 0px !important;
+}
+
+.pager-actual {
+    padding: 0px 5px;
+}
+
+.factor-color {
+    color: #fff;
+}
+
+.scroll-reactivos {
+    height: 600px;
+    overflow: auto;
+}
+
+.fijo {
+    position: fixed !important;
+    right: 795px;
+    z-index: 10 !important;
+    width: 300px;
+}
+
+.b-b-1 {
+    border-bottom: solid 1px #f2f2f2;
+}
+
+.ancho-logo {
+    width: 175px;
+}
+
+.alineacion-boton {
+    text-align: center;
+}
+
+.img_svg[src*=svg] {
+    width: 100px;
+}
+
+.pill-span {
+    margin: 0 1px;
+}
+
+.btn-excel {
+    color: #2A784E;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.btn-excel:focus,
+.btn-excel.focus {
+    color: #2A784E;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-excel:hover {
+    color: #2A784E;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-excel:active,
+.btn-excel.active,
+.open > .btn-excel.dropdown-toggle {
+    color: #2A784E;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-excel:active:hover,
+.btn-excel:active:focus,
+.btn-excel:active.focus,
+.btn-excel.active:hover,
+.btn-excel.active:focus,
+.btn-excel.active.focus,
+.open > .btn-excel.dropdown-toggle:hover,
+.open > .btn-excel.dropdown-toggle:focus,
+.open > .btn-excel.dropdown-toggle.focus {
+    color: #2A784E;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-excel:active,
+.btn-excel.active,
+.open > .btn-excel.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-excel.disabled:hover,
+.btn-excel.disabled:focus,
+.btn-excel.disabled.focus,
+.btn-excel[disabled]:hover,
+.btn-excel[disabled]:focus,
+.btn-excel[disabled].focus,
+fieldset[disabled] .btn-excel:hover,
+fieldset[disabled] .btn-excel:focus,
+fieldset[disabled] .btn-excel.focus {
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-excel .badge {
+    color: #2A784E;
+    background-color: #fff;
+}
+
+.btn-excel.btn-border {
+    border-color: #2A784E;
+    color: #2A784E;
+}
+
+.btn-excel.btn-border:hover,
+.btn-excel.btn-border:focus,
+.btn-excel.btn-border.focus,
+.btn-excel.btn-border:active,
+.btn-excel.btn-border.active,
+.open > .btn-excel.btn-border.dropdown-toggle {
+    color: #fff;
+    background-color: #2A784E;
+}
+
+.btn-pdf {
+    color: red;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.btn-pdf:focus,
+.btn-pdf.focus {
+    color: red;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-pdf:hover {
+    color: red;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-pdf:active,
+.btn-pdf.active,
+.open > .btn-pdf.dropdown-toggle {
+    color: red;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-pdf:active:hover,
+.btn-pdf:active:focus,
+.btn-pdf:active.focus,
+.btn-pdf.active:hover,
+.btn-pdf.active:focus,
+.btn-pdf.active.focus,
+.open > .btn-pdf.dropdown-toggle:hover,
+.open > .btn-pdf.dropdown-toggle:focus,
+.open > .btn-pdf.dropdown-toggle.focus {
+    color: red;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-pdf:active,
+.btn-pdf.active,
+.open > .btn-pdf.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-pdf.disabled:hover,
+.btn-pdf.disabled:focus,
+.btn-pdf.disabled.focus,
+.btn-pdf[disabled]:hover,
+.btn-pdf[disabled]:focus,
+.btn-pdf[disabled].focus,
+fieldset[disabled] .btn-pdf:hover,
+fieldset[disabled] .btn-pdf:focus,
+fieldset[disabled] .btn-pdf.focus {
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-pdf .badge {
+    color: red;
+    background-color: #fff;
+}
+
+.btn-pdf.btn-border {
+    border-color: red;
+    color: red;
+}
+
+.btn-pdf.btn-border:hover,
+.btn-pdf.btn-border:focus,
+.btn-pdf.btn-border.focus,
+.btn-pdf.btn-border:active,
+.btn-pdf.btn-border.active,
+.open > .btn-pdf.btn-border.dropdown-toggle {
+    color: #fff;
+    background-color: red;
+}
+
+.btn-word {
+    color: #345999;
+    background-color: #fff;
+    border-color: transparent;
+}
+
+.btn-word:focus,
+.btn-word.focus {
+    color: #345999;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-word:hover {
+    color: #345999;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-word:active,
+.btn-word.active,
+.open > .btn-word.dropdown-toggle {
+    color: #345999;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-word:active:hover,
+.btn-word:active:focus,
+.btn-word:active.focus,
+.btn-word.active:hover,
+.btn-word.active:focus,
+.btn-word.active.focus,
+.open > .btn-word.dropdown-toggle:hover,
+.open > .btn-word.dropdown-toggle:focus,
+.open > .btn-word.dropdown-toggle.focus {
+    color: #345999;
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-word:active,
+.btn-word.active,
+.open > .btn-word.dropdown-toggle {
+    background-image: none;
+}
+
+.btn-word.disabled:hover,
+.btn-word.disabled:focus,
+.btn-word.disabled.focus,
+.btn-word[disabled]:hover,
+.btn-word[disabled]:focus,
+.btn-word[disabled].focus,
+fieldset[disabled] .btn-word:hover,
+fieldset[disabled] .btn-word:focus,
+fieldset[disabled] .btn-word.focus {
+    background-color: #f2f2f2;
+    border-color: transparent;
+}
+
+.btn-word .badge {
+    color: #345999;
+    background-color: #fff;
+}
+
+.btn-word.btn-border {
+    border-color: #345999;
+    color: #345999;
+}
+
+.btn-word.btn-border:hover,
+.btn-word.btn-border:focus,
+.btn-word.btn-border.focus,
+.btn-word.btn-border:active,
+.btn-word.btn-border.active,
+.open > .btn-word.btn-border.dropdown-toggle {
+    color: #fff;
+    background-color: #345999;
+}
+
+.aspecto {
+    font-weight: 600;
+    font-size: 15px;
+}
+/*bestilo boton asignar jefe*/
+.btn-asignarjefe{
+    width: 180px;
+    text-align: left;
+}
+
+#tablaEstilo{
+    vertical-align: bottom;
+    border-bottom: 1px solid #F0F0F0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+}
+#tablaEstilo th{
+    font-weight: 500;
+}
+
+.thead_ {
+    background: #FAFAFA;
+    tr > th {
+      vertical-align: bottom;
+      border-bottom: 1px solid #F0F0F0;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size:11px;
+
+      &:first-child {
+        padding-left: 40px;
+      }
+      &:last-child {
+        padding-right:20px;
+      }
+
+      input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin: 0px;
+
+        &:after {
+          width: 19px;
+          height: 19px;
+          margin-top: 1px;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+  .table-empleado-jefe{
+      width: 80%;
+  }
+  .alineacion-radios-button{
+          display: table-cell;
+  }
+  
+  .ir-arriba {
+	padding:20px;
+	display:inline-block;
+	background:#024959;
+	color:#fff;
+	position: fixed;
+	font-size:20px;
+	bottom:10px;
+	right:10px;
+	display:none;
+	cursor:pointer;
+}
+.texto-color-blanco{
+    color:#fff;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-y: auto;
+    _overflow: auto;
+    margin: 0 0 1em;
+}
+
+.table-scroll::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+}
+.table-scroll::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+section.factores-cuestionario div.factores-dimension .factores-reactivo-lista .form-group
+{
+    display: block;
+}
+section.factores-cuestionario div.factores-dimension .factores-reactivo-lista .form-group .radio-inline
+{
+    display: inline-block;
+    width: calc(20% - 20px);
+    vertical-align: top;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.cumplimientoMuyAlto{
+    background: #09820d;
+    color: white;
+    text-align: center;
+}
+.cumplimientoAlto{
+    background: #4caf50;
+    color: white;
+    text-align: center;
+}
+.cumplimientoMediano{
+    background: #ffab40;
+    color: white;
+    text-align: center;
+} 
+.cumplimientoBajo{
+    background: #f32c1e;
+    color: white;
+    text-align: center;
+} 
+.cumplimientoMuyBajo{
+    background: #b20b00;
+    color: white;
+    text-align: center;
+} 
+.noAplica{
+    color: black;
+    text-align: center;
+}
+
+.b-b-1{
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.b-t-1{
+    border-top: 1px solid #F0F0F0;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.color-deshabilitado{
+    opacity: 0.65;
+}
+
+/*
+
+ Sistema de inconformidades
+
+*/
+
+.system_title {
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 40px;
+}
+
+.system_title h1 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+main .main-container .main-content {
+    position: relative;
+    padding-top: 0;
+}
+
+.progress {
+    margin-bottom: 0px;
+}
