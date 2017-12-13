@@ -16,6 +16,11 @@ app.config(function($routeProvider){
 		controller: 'inconformidadCtrl'		
 	})
 
+	.when('/tabs',{
+		templateUrl: 'templates/tabs.html',
+		controller: 'tabsCtrl'		
+	})
+
 	.otherwise({
 		redirectTo: '/'
 

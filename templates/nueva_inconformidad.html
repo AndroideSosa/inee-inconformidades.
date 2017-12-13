@@ -25,7 +25,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-2 control-label">Fecha del escrito</label>
                                     <div class="col-lg-10">
-                                        <input type="date" class="form-control" placeholder="Datepicker" ng-model="fecha.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -143,7 +143,7 @@
                             <div class="form-group" ng-show="mostrarRespuesta==true">
                                 <label for="inputEmail" class="col-lg-2 control-label">Fecha del oficio</label>
                                 <div class="col-lg-10">
-                                    <input type="date" class="form-control" placeholder="Datepicker" ng-model="oficio.seleccionada" ng-disabled="divMostrarBoton==false">
+                                    <input class="form-control" placeholder="Seleccione una fecha" ng-model="oficio.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="divMostrarBoton==false">
                                 </div>
                             </div>
                             <div class="form-group">

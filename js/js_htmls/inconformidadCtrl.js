@@ -200,7 +200,7 @@ $scope.activarDivProcedencia = function(){
 
 $scope.activarDivPrevencion = function(){
 
-	if($scope.respuesta.id == null || $scope.oficio.seleccionada == null){
+	if($scope.respuesta.id == null || $scope.oficio.seleccionada == null || $scope.oficio.seleccionada == ""){
 
 			swal({
 						title: 'Alerta',

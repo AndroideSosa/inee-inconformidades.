@@ -3,6 +3,18 @@ app.controller('loginCtrl', ['$scope','$http','$cookies',function ($scope, $http
 	$scope.login = function(){
 	$cookies.put('Usuario', $scope.usuario);
 	$cookies.put('Password', $scope.password);
+	var usuario = $cookies.get('Usuario');
+	console.log(usuario)
+	var password = $cookies.get('Password');
+	console.log(password)
+
+	if(usuario != null && password != null){
+		var session = true;
+		$cookies.put('Sesion', session);
+		var prueba = $cookies.get('Sesion');
+		console.log(prueba);
+		$scope.mostrar.sideBar = true;
+	} 	
 	window.location.href = "#!/"
 	}
 

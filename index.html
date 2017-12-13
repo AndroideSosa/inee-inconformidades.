@@ -57,27 +57,15 @@
     <script src="js/js_htmls/loginCtrl.js"></script>
     <script src="js/js_htmls/homeCtrl.js"></script>
     <script src="js/js_htmls/inconformidadCtrl.js"></script>
+    <script src="js/js_htmls/tabsCtrl.js"></script>
 </head>
 
 <body>
-        <aside class="sidebar fixed">
-            <div class="brand-logo grey lighten-3">
-                <img src="img/inee-logo-simple.png" title="INEE" class="img-responsive">
-            </div>
-            <div class="user-logged-in">
-                <div class="content">
-                    <div class="user-name">{{usuarioCookie}}</div>
-                    <div class="user-email">{{usuarioCookie}}@DOMINIO.COM</div>
-                    <div class="user-actions pull-right">
-                        <a href="" ng-click="logout()">Cerrar Sesión</a>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <div ng-include="sidebar" ng-show="mostrar.sideBar"></div>
         <!-- La página principal irá aquí -->
-        <div class="main-container">
-            <ul class="menu-links" ng-cloak>
-                <a menu-link href="#!/" icon="md md-blur-on">Bienvenidos</a> / 
+        <div class="main-container" >
+            <ul class="menu-links" ng-cloak ng-show="mostrar.sideBar">
+                <a  icon="md md-blur-on">Bienvenidos</a> / 
                 <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Nueva inconformidad</a>
             </ul>
             <div ng-view>
