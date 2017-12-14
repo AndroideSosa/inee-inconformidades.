@@ -1,235 +1,226 @@
 <section>
-    <div class="row">
-      
-            <h1>Sistema de inconformidades</h1>
-            <br>
-            <div class="page-header">
-                <h1>
-        <i class="material-icons">add</i>
-      Registro de nueva Inconformidad
-    </h1>
-                <p class="lead">
-                    <!-- TExT      -->
-                </p>
-            </div>
-            <div class="row m-b-40">
-                <div class="col-md-2 col-md-push-9">
-                    <h5>TÍTULO DE AYUDA</h5>
-                    <p>Texto de ayuda</p>
-                </div>
-                <div class="col-md-9 col-md-pull-2">
-                    <div class="well white">
-                        <form class="form-horizontal placeholder-form" ng-submit="activarDiv()">
-                            <fieldset>
-                                <legend class="p-t-20 p-b-10">Datos generales</legend>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Fecha del escrito</label>
-                                    <div class="col-lg-10">
-                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Presenta</label>
-                                    <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Presenta" ng-model="presenta.seleccionada" ng-disabled="mostrarDivProcedencia==true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Tipo de evento</label>
-                                    <div class="col-lg-10">
-                                        <select class="form-control" ng-model="elegido.id" ng-options="evento.id as evento.tipo for evento in tipo_Eventos" ng-disabled="mostrarDivProcedencia==true">
-                                            <option value="">Seleccione un tipo de evento</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Número de Procedimiento de contratación</label>
-                                    <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Introduzca su número de procedimiento de contratación" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Etapa</label>
-                                    <div class="col-lg-10">
-                                        <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
-                                            <option value=""> Seleccione una etapa</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Bien o servicio a contratar</label>
-                                    <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Bien o servicio a contratar" ng-model="servicio.seleccionada" ng-disabled="mostrarDivProcedencia==true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-2 control-label">Área Requiriente</label>
-                                    <div class="col-lg-10">
-                                        <select class="form-control" ng-model="area.id" ng-options="area.id as area.tipo for area in tipo_Areas" ng-disabled="mostrarDivProcedencia==true">
-                                            <option value="">Seleccione un área requiriente</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-lg-10 col-lg-offset-2">
-                                        <button type="reset" class="btn btn-default" ng-show="mostrarDivProcedencia!=true">Cancelar</button>
-                                        <button type="submit" class="btn btn-primary" ng-show="mostrarDivProcedencia!=true">Guardar</button>
-                                    </div>
-                                </div>
-                        </form>
-                        <form class="form-horizontal placeholder-form" ng-submit="activarDivProcedencia()">
-                            <legend class="p-t-20 p-b-10" ng-show="mostrarDivProcedencia==true">Revisión del Acuerdo de Procedencia</legend>
-                            <div class="form-group" ng-show="mostrarDivProcedencia==true">
-                                <label class="col-lg-2 control-label">¿Está completo?</label>
+    <div class="page-header">
+        <h1><i class="material-icons">add</i>Auditoria Interna / Quejas</h1>
+        <p class="lead">
+            Registre los datos solicitados a continuación
+        </p>
+    </div>
+    <div class="row m-b-40">
+        <div class="col-md-3 col-md-push-9">
+            <h5>Ayuda</h5>
+            <p>Texto de ayuda</p>
+        </div>
+        <div class="col-md-9 col-md-pull-3">
+                <div class="well white">
+                    <form class="form-horizontal placeholder-form" ng-submit="activarDiv()">
+                        <fieldset>
+                            <legend class="p-t-20 p-b-10">Datos generales</legend>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Fecha del escrito</label>
                                 <div class="col-lg-10">
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="true" ng-model="revision" ng-click="cambiarEstado()" ng-disabled="deshabilitarRadio==true"> Si
-                                        </label>
-                                    </div>
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="false" ng-model="revision" ng-click="cambiarEstadoFalse()" ng-disabled="deshabilitarRadio==true"> No
-                                        </label>
-                                    </div>
+                                    <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
                                 </div>
                             </div>
-                            <div class="form-group" ng-show="mostrarDivAbogados==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Abogado responsables</label>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Presenta</label>
                                 <div class="col-lg-10">
-                                    <select class="form-control" ng-model="abogado.id" ng-options="abogado.id as abogado.tipo for abogado in tipo_Abogados" ng-disabled="deshabilitarRadio==true">
-                                        <option value="">Seleccione un abogado</option>
+                                    <input type="text" class="form-control" placeholder="Presenta" ng-model="presenta.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Tipo de evento</label>
+                                <div class="col-lg-10">
+                                    <select class="form-control" ng-model="elegido.id" ng-options="evento.id as evento.tipo for evento in tipo_Eventos" ng-disabled="mostrarDivProcedencia==true">
+                                        <option value="">Seleccione un tipo de evento</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group" ng-show="mostrarDivObservaciones==true">
-                                <label for="textArea" class="col-lg-2 control-label">Observaciones</label>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Número de Procedimiento de contratación</label>
                                 <div class="col-lg-10">
-                                    <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Observaciones del acuerdo de Procedencia" ng-model="observaciones.seleccionada" ng-disabled="ocultarDivObservaciones==true"></textarea>
+                                    <input type="text" class="form-control" placeholder="Introduzca su número de procedimiento de contratación" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default" ng-show="mostrarDivBoton==true">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary" ng-show="mostrarDivBoton==true">Guardar</button>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="form-horizontal placeholder-form" ng-submit="activarDivPrevencion()">
-                            <legend class="p-t-20 p-b-10" ng-show="mostrarInconforme==true">Prevención al Inconforme</legend>
-                            <div class="form-group" ng-show="mostrarInconforme==true">
-                                <label class="col-lg-2 control-label" ng-show="mostrarInconforme==true">¿Existe prevención?</label>
-                                <div class="col-lg-10" ng-show="mostrarDivInconforme==true">
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios3" id="optionsRadios3" value="true" ng-model="revisionInconforme" ng-click="cambiarEstadoInconforme()" ng-disabled="ocultarDivInconforme==true"> Si
-                                        </label>
-                                    </div>
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios4" id="optionsRadios4" value="false" ng-model="revisionInconforme" ng-disabled="ocultarDivInconforme==true"> No
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group" ng-show="mostrarRespuesta==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Respuesta</label>
+                                <label for="inputEmail" class="col-lg-2 control-label">Etapa</label>
                                 <div class="col-lg-10">
-                                    <select class="form-control" ng-model="respuesta.id" ng-options="respuesta.id as respuesta.tipo for respuesta in tipo_Respuesta" ng-disabled="divMostrarBoton==false">
-                                        <option value="">Seleccione una respuesta</option>
+                                    <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                        <option value=""> Seleccione una etapa</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group" ng-show="mostrarRespuesta==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Fecha del oficio</label>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Bien o servicio a contratar</label>
                                 <div class="col-lg-10">
-                                    <input class="form-control" placeholder="Seleccione una fecha" ng-model="oficio.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="divMostrarBoton==false">
+                                    <input type="text" class="form-control" placeholder="Bien o servicio a contratar" ng-model="servicio.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-2 control-label">Área Requiriente</label>
+                                <div class="col-lg-10">
+                                    <select class="form-control" ng-model="area.id" ng-options="area.id as area.tipo for area in tipo_Areas" ng-disabled="mostrarDivProcedencia==true">
+                                        <option value="">Seleccione un área requiriente</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default" ng-show="divMostrarBoton==true">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary" ng-show="divMostrarBoton==true">Guardar</button>
+                                    <button type="reset" class="btn btn-default" ng-show="mostrarDivProcedencia!=true">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary" ng-show="mostrarDivProcedencia!=true">Guardar</button>
                                 </div>
                             </div>
-                        </form>
-                        <form class="form-horizontal placeholder-form" ng-submit="activarDivAcuerdo()">
-                            <legend class="p-t-20 p-b-10" ng-show="mostrarAcuerdoImprocedencia==true">Registro de Acuerdo de improcedencia</legend>
-                            <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Fecha</label>
-                                <div class="col-lg-10">
-                                    <input type="date" class="form-control" placeholder="Datepicker" ng-model="acuerdo.seleccionada" ng-disabled="divOcultarMotivo==true">
-                                </div>
-                            </div>
-                            <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
-                                <label for="textArea" class="col-lg-2 control-label">Motivo</label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Justificación" ng-model="motivo.seleccionada" ng-disabled="divOcultarMotivo==true"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default" ng-show="divMostrarAcuerdo==true">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary" ng-show="divMostrarAcuerdo==true">Guardar</button>
-                                </div>
-                            </div>
-                        </form>
-                        <legend class="p-t-20 p-b-10" ng-show="mostrarCita==true">Inpugnación de improcedencia</legend>
-                        <div class="form-group" ng-show="mostrarCita==true">
-                            <label for="inputEmail" class="col-lg-2 control-label">Modo</label>
+                        </fieldset>
+                    </form>
+                    <form class="form-horizontal placeholder-form" ng-submit="activarDivProcedencia()">
+                        <legend class="p-t-20 p-b-10" ng-show="mostrarDivProcedencia==true">Revisión del Acuerdo de Procedencia</legend>
+                        <div class="form-group" ng-show="mostrarDivProcedencia==true">
+                            <label class="col-lg-2 control-label">¿Está completo?</label>
                             <div class="col-lg-10">
-                                <select class="form-control" ng-model="modo.id" ng-options="modo.id as modo.tipo for modo in tipo_Modo" ng-disabled="ocultarDivNotificacion==true">
-                                    <option value="">Seleccione un modo de inpugnación</option>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="true" ng-model="revision" ng-click="cambiarEstado()" ng-disabled="deshabilitarRadio==true"> Si
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="false" ng-model="revision" ng-click="cambiarEstadoFalse()" ng-disabled="deshabilitarRadio==true"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="mostrarDivAbogados==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Abogado responsables</label>
+                            <div class="col-lg-10">
+                                <select class="form-control" ng-model="abogado.id" ng-options="abogado.id as abogado.tipo for abogado in tipo_Abogados" ng-disabled="deshabilitarRadio==true">
+                                    <option value="">Seleccione un abogado</option>
                                 </select>
                             </div>
                         </div>
-                        <form class="form-horizontal placeholder-form" ng-submit="activarDivNotificacion()">
-                            <legend class="p-t-20 p-b-10" ng-show="mostrarAcuerdoImprocedencia==true">Notificación de improcedencia</legend>
-                            <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
-                                <label class="col-lg-2 control-label">¿Se notificó personalmente al inconforme?</label>
-                                <div class="col-lg-10">
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios5" id="optionsRadios5" value="true" ng-model="notificacionImprocedencia" ng-click="cambiarEstadoImprocedencia()" ng-disabled="ocultarDivNotificacion==true"> Si
-                                        </label>
-                                    </div>
-                                    <div class="radio-inline">
-                                        <label>
-                                            <input type="radio" name="optionsRadios6" id="optionsRadios6" value="false" ng-model="notificacionImprocedencia" ng-click="cambiarEstadoImprocedenciaFalse()" ng-disabled="ocultarDivNotificacion==true"> No
-                                        </label>
-                                    </div>
+                        <div class="form-group" ng-show="mostrarDivObservaciones==true">
+                            <label for="textArea" class="col-lg-2 control-label">Observaciones</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Observaciones del acuerdo de Procedencia" ng-model="observaciones.seleccionada" ng-disabled="ocultarDivObservaciones==true"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" ng-show="mostrarDivBoton==true">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" ng-show="mostrarDivBoton==true">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-horizontal placeholder-form" ng-submit="activarDivPrevencion()">
+                        <legend class="p-t-20 p-b-10" ng-show="mostrarInconforme==true">Prevención al Inconforme</legend>
+                        <div class="form-group" ng-show="mostrarInconforme==true">
+                            <label class="col-lg-2 control-label" ng-show="mostrarInconforme==true">¿Existe prevención?</label>
+                            <div class="col-lg-10" ng-show="mostrarDivInconforme==true">
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios3" id="optionsRadios3" value="true" ng-model="revisionInconforme" ng-click="cambiarEstadoInconforme()" ng-disabled="ocultarDivInconforme==true"> Si
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios4" id="optionsRadios4" value="false" ng-model="revisionInconforme" ng-disabled="ocultarDivInconforme==true"> No
+                                    </label>
                                 </div>
                             </div>
-                            <legend class="small" ng-show="mostrarObservacionesCitatorio==true">Notificación con citatorio previo</legend>
-                            <div class="form-group" ng-show="mostrarCita==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Fecha del oficio</label>
-                                <div class="col-lg-10">
-                                    <input type="date" class="form-control" placeholder="Datepicker" ng-model="cita.seleccionada" ng-disabled="ocultarDivNotificacion==true">
-                                </div>
+                        </div>
+                        <div class="form-group" ng-show="mostrarRespuesta==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Respuesta</label>
+                            <div class="col-lg-10">
+                                <select class="form-control" ng-model="respuesta.id" ng-options="respuesta.id as respuesta.tipo for respuesta in tipo_Respuesta" ng-disabled="divMostrarBoton==false">
+                                    <option value="">Seleccione una respuesta</option>
+                                </select>
                             </div>
-                            <div class="form-group" ng-show="mostrarCita==true">
-                                <label for="inputEmail" class="col-lg-2 control-label">Hora del oficio</label>
-                                <div class="col-lg-6">
-                                    <input type="time" class="form-control" placeholder="Timepicker" ng-model="hora.seleccionada" ng-disabled="ocultarDivNotificacion==true">
-                                </div>
+                        </div>
+                        <div class="form-group" ng-show="mostrarRespuesta==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Fecha del oficio</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="oficio.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="divMostrarBoton==false">
                             </div>
-                            <div class="form-group" ng-show="mostrarObservacionesCitatorio==true">
-                                <label for="textArea" class="col-lg-2 control-label">Observaciones</label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Observaciones de la notificación con citatorio previo" ng-model="observacionesCitatorio.seleccionada" ng-disabled="ocultarDivNotificacion==true"></textarea>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" ng-show="divMostrarBoton==true">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" ng-show="divMostrarBoton==true">Guardar</button>
                             </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default" ng-show="divMostrarNotificacion==true">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary" ng-show="divMostrarNotificacion==true">Guardar</button>
-                                </div>
+                        </div>
+                    </form>
+                    <form class="form-horizontal placeholder-form" ng-submit="activarDivAcuerdo()">
+                        <legend class="p-t-20 p-b-10" ng-show="mostrarAcuerdoImprocedencia==true">Registro de Acuerdo de improcedencia</legend>
+                        <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Fecha</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" placeholder="Datepicker" ng-model="acuerdo.seleccionada" ng-disabled="divOcultarMotivo==true">
                             </div>
-                        </form>
-                        </fieldset>
+                        </div>
+                        <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
+                            <label for="textArea" class="col-lg-2 control-label">Motivo</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Justificación" ng-model="motivo.seleccionada" ng-disabled="divOcultarMotivo==true"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" ng-show="divMostrarAcuerdo==true">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" ng-show="divMostrarAcuerdo==true">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <legend class="p-t-20 p-b-10" ng-show="mostrarCita==true">Inpugnación de improcedencia</legend>
+                    <div class="form-group" ng-show="mostrarCita==true">
+                        <label for="inputEmail" class="col-lg-2 control-label">Modo</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" ng-model="modo.id" ng-options="modo.id as modo.tipo for modo in tipo_Modo" ng-disabled="ocultarDivNotificacion==true">
+                                <option value="">Seleccione un modo de inpugnación</option>
+                            </select>
+                        </div>
                     </div>
+                    <form class="form-horizontal placeholder-form" ng-submit="activarDivNotificacion()">
+                        <legend class="p-t-20 p-b-10" ng-show="mostrarAcuerdoImprocedencia==true">Notificación de improcedencia</legend>
+                        <div class="form-group" ng-show="mostrarAcuerdoImprocedencia==true">
+                            <label class="col-lg-2 control-label">¿Se notificó personalmente al inconforme?</label>
+                            <div class="col-lg-10">
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios5" id="optionsRadios5" value="true" ng-model="notificacionImprocedencia" ng-click="cambiarEstadoImprocedencia()" ng-disabled="ocultarDivNotificacion==true"> Si
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="optionsRadios6" id="optionsRadios6" value="false" ng-model="notificacionImprocedencia" ng-click="cambiarEstadoImprocedenciaFalse()" ng-disabled="ocultarDivNotificacion==true"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <legend class="small" ng-show="mostrarObservacionesCitatorio==true">Notificación con citatorio previo</legend>
+                        <div class="form-group" ng-show="mostrarCita==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Fecha del oficio</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" placeholder="Datepicker" ng-model="cita.seleccionada" ng-disabled="ocultarDivNotificacion==true">
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="mostrarCita==true">
+                            <label for="inputEmail" class="col-lg-2 control-label">Hora del oficio</label>
+                            <div class="col-lg-6">
+                                <input type="time" class="form-control" placeholder="Timepicker" ng-model="hora.seleccionada" ng-disabled="ocultarDivNotificacion==true">
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="mostrarObservacionesCitatorio==true">
+                            <label for="textArea" class="col-lg-2 control-label">Observaciones</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control vertical" rows="3" id="textArea" placeholder="Observaciones de la notificación con citatorio previo" ng-model="observacionesCitatorio.seleccionada" ng-disabled="ocultarDivNotificacion==true"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" ng-show="divMostrarNotificacion==true">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" ng-show="divMostrarNotificacion==true">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
         </div>
     </div>
 </section>

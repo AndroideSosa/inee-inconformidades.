@@ -35,11 +35,12 @@
     <!-- Incluir estilos -->
     <link href="css/materialism.css" rel="stylesheet" />
     <link href="css/angular-ui-select.css" rel="stylesheet" />
+    <!-- Importar iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/helpers.css" rel="stylesheet" />
     <link href="css/ripples.css" rel="stylesheet" />
     <link href="css/inee.css" rel="stylesheet" type="text/css" />
-    <!-- Importar iconos -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <!-- Incluir SweetAlert -->
     <script src="lib/sweetalert.min.js"></script>
     <!-- Incluir SweetAlert2 -->
@@ -64,12 +65,31 @@
         <div ng-include="sidebar" ng-show="mostrar.sideBar"></div>
         <!-- La página principal irá aquí -->
         <div class="main-container" >
-            <ul class="menu-links" ng-cloak ng-show="mostrar.sideBar">
-                <a  icon="md md-blur-on">Bienvenidos</a> / 
-                <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Nueva inconformidad</a>
-            </ul>
-            <div ng-view>
-                
+<!-- <ul class="menu-links" ng-cloak ng-show="mostrar.sideBar">
+    <a icon="md md-blur-on">Bienvenidos</a> /
+    <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Nueva inconformidad</a>
+</ul> -->
+            <nav class="navbar navbar-default navbar-fixed-top" ng-class="{scroll: (scroll>10)}">
+              <div class="container-fluid">
+                <div class="navbar-header pull-left">
+                  <button type="button" class="navbar-toggle pull-left m-15" data-activates=".sidebar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <ul class="breadcrumb">
+                    <li><a href="#/">Responsabilidades</a></li>
+                    <li ng-bind="pageTitle" class="active">Loading..</li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="section-container">
+                <h1 class="titulo_sistema">Sistema de Procedimiento Administrativo de Responsabilidades (SPAR - INEE)</h1>
+                <div ng-view>
+                    
+                </div>
             </div>
         </div>
 </body>

@@ -21,6 +21,10 @@ app.config(function($routeProvider){
 		controller: 'tabsCtrl'		
 	})
 
+	.when('/tipo_ley',{
+		templateUrl: 'templates/tipo_ley.html'		
+	})
+
 	.otherwise({
 		redirectTo: '/'
 

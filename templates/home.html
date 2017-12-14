@@ -1,123 +1,114 @@
 <section>
-    <div class="row">
-        <div>
-            <h1>Sistema de inconformidades</h1>
-            <br>
-            <div class="row">
-                <div class="well white">
-                    <div class="page-header">
-                        <h1>
-                  <i class="material-icons">list</i>
-                  Consulta de inconformidades
-                </h1>
-                        <p class="lead">
-                            This is an example how to display table data and default actions you can use.
-                        </p>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-full table-full-small table-striped">
-                            <colgroup>
-                                <col class="auto-cell-size" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="text-center">Expediente</th>
-                                    <th class="text-center">Fecha de escrito</th>
-                                    <th class="text-center">Área responsable</th>
-                                    <th class="text-center">Abogado responsable</th>
-                                    <th class="text-center">Etapa/Estado</th>
-                                    <th class="text-center">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1854785</td>
-                                    <td>11/22/3333</td>
-                                    <td>Dirección General de informatica y Servicios Técnicos</td>
-                                    <td class="text-center">Sandro Diego Bárcena García</td>
-                                    <td class="text-center">
-                                        <div class="col-xs-12">
-                                            <i class="material-icons size-big">filter_1</i>
-                                            <i class="material-icons size-big">filter_2</i>
-                                            <i class="material-icons size-huge text-info">filter_3</i>
-                                            <i class="material-icons size-big text-muted">filter_4</i>
-                                            <i class="material-icons size-big text-muted">filter_5</i>
-                                        </div>
-                                        <div class="col-xs-12">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-info" style="width: 60%;"></div>
-                                            </div>
-                                            <p class="text-info small no-margin">10 días restantes</p>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
-                                        <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1854785</td>
-                                    <td>11/22/3333</td>
-                                    <td>Dirección General de informatica y Servicios Técnicos</td>
-                                    <td class="text-center">Sandro Diego Bárcena García</td>
-                                    <td class="text-center">
-                                        <div class="col-xs-12">
-                                            <i class="material-icons size-big">filter_1</i>
-                                            <i class="material-icons size-huge text-warning">filter_2</i>
-                                            <i class="material-icons size-big text-muted">filter_3</i>
-                                            <i class="material-icons size-big text-muted">filter_4</i>
-                                            <i class="material-icons size-big text-muted">filter_5</i>
-                                        </div>
-                                        <div class="col-xs-12">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-warning" style="width: 90%;"></div>
-                                            </div>
-                                            <p class="text-warning small no-margin">3 días restantes</p>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
-                                        <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1854785</td>
-                                    <td>11/22/3333</td>
-                                    <td>Dirección General de informatica y Servicios Técnicos</td>
-                                    <td class="text-center">Sandro Diego Bárcena García</td>
-                                    <td class="text-center">
-                                        <div class="col-xs-12">
-                                            <i class="material-icons size-big">filter_1</i>
-                                            <i class="material-icons size-big">filter_2</i>
-                                            <i class="material-icons size-big">filter_3</i>
-                                            <i class="material-icons size-big">filter_4</i>
-                                            <i class="material-icons size-huge text-danger">filter_5</i>
-                                        </div>
-                                        <div class="col-xs-12">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-danger" style="width: 100%;"></div>
-                                            </div>
-                                            <p class="text-danger small no-margin">5 días de atraso</p>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
-                                        <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
-                                        <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="p-t-20">
-                            <span class="help-block text-right">
+    <div class="page-header">
+        <h1><i class="material-icons">list</i>Listado de Procedimientos</h1>
+        <p class="lead">
+            Selecciona el Procedimiento para editar/ver su proceso
+        </p>
+    </div>
+    <div class="row m-b-40">
+        <div class="well white">
+            <div class="table-responsive">
+                <table class="table table-bordered table-full table-full-small table-striped">
+                    <colgroup>
+                        <col class="auto-cell-size" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">Expediente</th>
+                            <th class="text-center">Fecha de escrito</th>
+                            <th class="text-center">Área responsable</th>
+                            <th class="text-center">Abogado responsable</th>
+                            <th class="text-center">Etapa/Estado</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1854785</td>
+                            <td>11/22/3333</td>
+                            <td>Dirección General de informatica y Servicios Técnicos</td>
+                            <td class="text-center">Sandro Diego Bárcena García</td>
+                            <td class="text-center">
+                                <div class="col-xs-12">
+                                    <i class="material-icons size-big">filter_1</i>
+                                    <i class="material-icons size-big">filter_2</i>
+                                    <i class="material-icons size-huge text-info">filter_3</i>
+                                    <i class="material-icons size-big text-muted">filter_4</i>
+                                    <i class="material-icons size-big text-muted">filter_5</i>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info" style="width: 60%;"></div>
+                                    </div>
+                                    <p class="text-info small no-margin">10 días restantes</p>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1854785</td>
+                            <td>11/22/3333</td>
+                            <td>Dirección General de informatica y Servicios Técnicos</td>
+                            <td class="text-center">Sandro Diego Bárcena García</td>
+                            <td class="text-center">
+                                <div class="col-xs-12">
+                                    <i class="material-icons size-big">filter_1</i>
+                                    <i class="material-icons size-huge text-warning">filter_2</i>
+                                    <i class="material-icons size-big text-muted">filter_3</i>
+                                    <i class="material-icons size-big text-muted">filter_4</i>
+                                    <i class="material-icons size-big text-muted">filter_5</i>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning" style="width: 90%;"></div>
+                                    </div>
+                                    <p class="text-warning small no-margin">3 días restantes</p>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1854785</td>
+                            <td>11/22/3333</td>
+                            <td>Dirección General de informatica y Servicios Técnicos</td>
+                            <td class="text-center">Sandro Diego Bárcena García</td>
+                            <td class="text-center">
+                                <div class="col-xs-12">
+                                    <i class="material-icons size-big">filter_1</i>
+                                    <i class="material-icons size-big">filter_2</i>
+                                    <i class="material-icons size-big">filter_3</i>
+                                    <i class="material-icons size-big">filter_4</i>
+                                    <i class="material-icons size-huge text-danger">filter_5</i>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" style="width: 100%;"></div>
+                                    </div>
+                                    <p class="text-danger small no-margin">5 días de atraso</p>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-info"><i class="material-icons">edit</i></button>
+                                <button class="btn btn-sm btn-info"><i class="material-icons">visibility</i></button>
+                                <button class="btn btn-sm btn-danger"><i class="material-icons">delete</i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="p-t-20">
+                    <span class="help-block text-right">
                                     <i class="material-icons">edit</i> Editar |
                                     <i class="material-icons">visibility</i> Detalles |
                                     <i class="material-icons">delete</i> Eliminar
                                 </span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -5415,9 +5415,9 @@ fieldset[disabled] a.btn {
   border-radius: 3px; }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
   border-radius: 3px; }
 
 .btn-xs, .btn-group-xs > .btn {

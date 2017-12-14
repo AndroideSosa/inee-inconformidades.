@@ -617,3 +617,19 @@ main .main-container .main-content {
 .progress {
     margin-bottom: 0px;
 }
+
+.section-container {
+    padding-top: 70px;
+}
+
+.material-icons {
+    font-size: 13px;
+    line-height: inherit !important;
+}
+
+.titulo_sistema {
+    font-size: 25px;
+    font-weight: 300;
+    padding: 20px 30px;
+    margin: 0;
+}

@@ -1,18 +1,19 @@
 <aside class="sidebar fixed">
-            <div class="brand-logo grey lighten-3">
-                <img src="img/inee-logo-simple.png" title="INEE" class="img-responsive">
+    <div class="brand-logo grey lighten-3">
+        <img src="img/inee-logo-simple.png" title="INEE" class="img-responsive">
+    </div>
+    <div class="user-logged-in">
+        <div class="content">
+            <div class="user-name">{{usuarioCookie}}</div>
+            <div class="user-email">{{usuarioCookie}}@DOMINIO.COM</div>
+            <div class="user-actions pull-right">
+                <a href="" ng-click="logout()">Cerrar Sesión</a>
             </div>
-            <div class="user-logged-in">
-                <div class="content">
-                    <div class="user-name">{{usuarioCookie}}</div>
-                    <div class="user-email">{{usuarioCookie}}@DOMINIO.COM</div>
-                    <div class="user-actions pull-right">
-                        <a href="" ng-click="logout()">Cerrar Sesión</a>
-                    </div>
-                </div>
-            </div>
-            <ul class="menu-links" ng-cloak>
-                <a menu-link href="#!/" icon="md md-blur-on">Bienvenidos</a>
-                <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Nueva inconformidad</a>
-        </ul>
+        </div>
+    </div>
+    <ul class="menu-links" ng-cloak>
+        <a menu-link href="#!/" icon="md md-blur-on">Bienvenidos</a>
+        <a menu-link href="#!/tipo_ley" icon="md md-blur-on">Registro de servidores públicos</a>
+        <a menu-link href="#!/nueva_inconformidad" icon="md md-blur-on">Datos de registro</a>
+    </ul>
 </aside>
