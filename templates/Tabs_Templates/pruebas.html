@@ -1,0 +1,109 @@
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal placeholder-form">
+            <fieldset>
+                <legend>Acuerdo de recepción de pruebas</legend>
+                <div class="form-group">
+                    <label for="inputEmail " class="col-lg-2 control-label ">Fecha de la acuerdo:</label>
+                    <div class="col-lg-10 ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                    </div>
+                </div>
+                <h5>Presunto(s) Responsable(s)</h5>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">¿Presentó pruebas?</label>
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Si
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="textArea " class="col-lg-2 control-label ">Observaciones</label>
+                    <div class="col-lg-10 ">
+                        <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Descripción... "></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Pruebas presentadas</label>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                    <option value=""> Seleccione un área</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Cantidad</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Cantidad de pruebas" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="reset " class="btn btn-default ">Agregar otra prueba</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 ">
+                    <a href="#!/nueva_inconformidad ">
+                        <button type="submit " class="btn btn-primary ">Guardar</button>
+                    </a>
+                    <a href="#!/ ">
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+        <form class="form-horizontal placeholder-form">
+            <fieldset>
+                <legend>Actualización de Estatus de Pruebas</legend>
+                <h5>Presunto(s) Responsable(s)</h5>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="textArea " class="col-lg-2 control-label ">Observaciones</label>
+                    <div class="col-lg-10 ">
+                        <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Descripción... "></textarea>
+                    </div>
+                </div>
+                <h5>Presunto(s) Responsable(s)</h5>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h6>Inspección Juidicial (1)</h6>
+                    </div>
+                    <div class="col-lg-10">
+                        
+                    </div>
+                </div>
+                <div class="form-group col-md-12 ">
+                    <a href="#!/nueva_inconformidad ">
+                        <button type="submit " class="btn btn-primary ">Guardar</button>
+                    </a>
+                    <a href="#!/ ">
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
