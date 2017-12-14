@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Número de Auditoria</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="Introduzca un número de autditoría" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                <input type="text" class="form-control" placeholder="Introduzca un número de autditoría">
                             </div>
                         </div>
                         <div class="form-group">
@@ -34,18 +34,72 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-2 control-label">Nombre del cargo</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
                                     </div>
                                 </div>                                
                             </div>
-                            <div class="col-md-4">
-                                <button type="reset" class="btn btn-default btn-sm">Agregar responsable</button>
+                            <div class="col-md-8" ng-show="agregar2==true">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre del cargo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="col-md-8" ng-show="agregar3==true">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre del cargo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>                                
+                            </div>
+                             <div class="col-md-8" ng-show="agregar4==true">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Nombre del cargo</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo">
+                                    </div>
+                                </div>                                
+                            </div>
+                             <div class="col-md-4" ng-show="bandera1==true">
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="activarSegundoDiv()">Agregar responsable</button>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera2==true">
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="activarTercerDiv()">Agregar responsable</button>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera3==true">
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="activarCuartoDiv()">Agregar responsable</button>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera4==true">
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="activarQuintoDiv()">Agregar responsable</button>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera5==true">
+                                <button type="submit" class="btn btn-default btn-sm" ng-click="activarSextoDiv()">Agregar responsable</button>
                             </div>
                         </div>
 
@@ -64,7 +118,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-4 control-label">Fecha de las irregularidades del:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada2" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +126,7 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-4 control-label">Al:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                                        <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada3" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
                                     </div>
                                 </div>
                             </div>

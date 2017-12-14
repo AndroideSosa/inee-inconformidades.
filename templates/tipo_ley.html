@@ -20,39 +20,39 @@
                                 <div class="form-group">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Ley Federal de Responsabilidades Administrativas de los Servidores Públicos (LFRASP)
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="true" ng-model="leyes" ng-click="cambiarFalse()"> Ley Federal de Responsabilidades Administrativas de los Servidores Públicos (LFRASP)
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Ley General de Responsabilidades Administrativas (LGRA)
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="false" ng-model="leyes" ng-click="cambiarFalse()"> Ley General de Responsabilidades Administrativas (LGRA)
                                         </label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" ng-show="expediente==true">
                         <div class="well white">
                             <fieldset>
                                 <legend>Origen del expediente</legend>
                                 <div class="form-group">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Auditoría interna
+                                            <input type="radio" name="optionsRadios3" id="optionsRadios3" value="true" ng-model="auditoria" ng-click="cambiarTrue()">Auditoría interna
                                         </label>
                                     </div>
-                                    <div class="radio">
+                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Quejas
+                                            <input type="radio" name="optionsRadios4" id="optionsRadios4" value="false" ng-model="auditoria" ng-click="cambiarTrue()">Quejas
                                         </label>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="form-group pull-right">
+                    <div class="col-md-12" ng-show="botonesLeyes">
+                        <div class="form-group pull-right" >
                             <a href="#!/nueva_inconformidad"><button type="submit" class="btn btn-primary">Acceder</button></a>
                             <a href="#!/"><button type="reset" class="btn btn-default">Cancelar</button></a>
                         </div>

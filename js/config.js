@@ -22,7 +22,8 @@ app.config(function($routeProvider){
 	})
 
 	.when('/tipo_ley',{
-		templateUrl: 'templates/tipo_ley.html'		
+		templateUrl: 'templates/tipo_ley.html',
+		controller: 'leyCtrl'		
 	})
 
 	.when('/consulta_responsabilidades',{
