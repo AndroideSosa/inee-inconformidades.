@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal placeholder-form">
+            <fieldset>
+                <legend>Desahogo de la Adiencia de ley</legend>
+                <h5>Presunto(s) Responsable(s)</h5>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Nombre del cargo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Introduzca el nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail " class="col-lg-4 control-label ">Fecha de la notificación:</label>
+                    <div class="col-lg-8 ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail " class="col-lg-4 control-label ">Hora de notificación:</label>
+                    <div class="col-lg-8 ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">¿Registra comparecencia?</label>
+                            <div class="col-lg-10">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Si
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group ">
+                            <label for="textArea " class="col-lg-2 control-label ">Observaciones</label>
+                            <div class="col-lg-10 ">
+                                <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Descripción... "></textarea>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Tipo de comparecencia?</label>
+                            <div class="col-lg-10">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Verbal
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Escrito
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Abogado
+                                    </label>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">¿Presentó declaración?</label>
+                            <div class="col-lg-10">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Si
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">¿Existen mas responsables?</label>
+                            <div class="col-lg-10">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Si
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                          
+
+                <div class="form-group col-md-12 ">
+                    <a href="#!/nueva_inconformidad ">
+                        <button type="submit " class="btn btn-primary ">Guardar</button>
+                    </a>
+                    <a href="#!/ ">
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

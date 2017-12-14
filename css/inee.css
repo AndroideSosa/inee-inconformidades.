@@ -650,3 +650,7 @@ main .main-container .main-content {
 .progress-bar-grey:last-child.progress-bar:before {
     background-color: #C8E6C9;
 }
+
+.page-header {
+    margin: 0
+}
