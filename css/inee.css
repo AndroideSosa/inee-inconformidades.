@@ -633,3 +633,20 @@ main .main-container .main-content {
     padding: 20px 30px;
     margin: 0;
 }
+
+
+.progress-bar-grey {
+    background-color: #555;
+}
+
+.progress-bar-grey:last-child.progress-bar:before {
+    background-color: #888;
+}
+
+.progress-bar-success {
+    background-color: #4CAF50;
+}
+
+.progress-bar-grey:last-child.progress-bar:before {
+    background-color: #C8E6C9;
+}

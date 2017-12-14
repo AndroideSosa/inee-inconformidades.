@@ -25,6 +25,10 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/tipo_ley.html'		
 	})
 
+	.when('/consulta_responsabilidades',{
+		templateUrl: 'templates/consulta_responsabilidades.html'
+	})
+
 	.otherwise({
 		redirectTo: '/'
 
