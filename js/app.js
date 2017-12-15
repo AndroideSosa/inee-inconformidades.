@@ -33,6 +33,7 @@ app.controller('mainCtrl', ['$scope','$http','$cookies',function ($scope, $http,
 
 $scope.logout = function(){
 	$cookies.remove('Sesion');
+	$cookies.remove('Usuario');
 	$scope.mostrar.sideBar = false;
 	window.location.href = "#!/login"
 	}
