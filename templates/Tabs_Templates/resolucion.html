@@ -1,0 +1,200 @@
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal placeholder-form">
+            <fieldset>
+                <legend>Emisión de la Resolución</legend>
+                <div class="form-group">
+                    <label for="inputEmail " class="col-lg-2 control-label ">Fecha de la resolución:</label>
+                    <div class="col-lg-10 ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                    </div>
+                </div>
+                <h5>Servidor(es) público(s) sancionado(s)</h5>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Sanción</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                            <option value="">Sanción a la que se le dictamina</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="textArea " class="col-lg-2 control-label ">Detalle</label>
+                    <div class="col-lg-10 ">
+                        <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Justificación de la decisión del tipo de sanción."></textarea>
+                    </div>
+                </div>
+                <legend>Notificación de la Resolución</legend>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">¿Se notificó personalmente al Servidor Público?</label>
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Fecha de la audiencia:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Hora de audiencia:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <label for="inputEmail " class="col-lg-2 control-label ">Fecha de desclasificación del Expediente:</label>
+                    <div class="col-lg-10 ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                    </div>
+                </div>
+                <legend>Registro de Oficio de Ejecución de Resolución</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Número de oficio</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Fecha de oficio:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Fecha de recepción:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Dirigido a:</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                            <option value="">Catálogo de Autoridades Ejecutoras</option>
+                        </select>
+                    </div>
+                </div>
+                <legend>Cumplimiento de la ejecución</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Número de oficio</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Fecha de oficio:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-4 control-label">Fecha de recepción:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Remitente:</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                            <option value="">Cargo del remitente</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="textArea " class="col-lg-2 control-label ">Detalle</label>
+                    <div class="col-lg-10 ">
+                        <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Justificación de la decisión del tipo de sanción."></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Crédito fiscal</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" placeholder="Monto" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                    </div>
+                </div>
+                <legend>Registro de impugnaciones</legend>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">¿Se impugnó la Resolución?</label>
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Servidor público</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" placeholder="Introduzca el nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Tipo</label>
+                            <div class="col-lg-10">
+                                <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                    <option value=""> Seleccione un cargo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="reset" class="btn btn-default btn-sm">Agregar destinatario</button>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-12 ">
+                    <a href="#!/nueva_inconformidad ">
+                        <button type="submit " class="btn btn-primary ">Guardar</button>
+                    </a>
+                    <a href="#!/ ">
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
