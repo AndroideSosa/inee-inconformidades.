@@ -9,11 +9,11 @@ var app = angular.module( 'INEE', [
 
 app.controller('mainCtrl', ['$scope','$http','$cookies',function ($scope, $http,$cookies) {
 
-
 	$scope.mostrar = {sideBar: false};
+	$scope.container = true;
 
 	$scope.usuarioSesion = $cookies.get('Sesion');
-	console.log($scope.usuarioSesion)
+	$scope.usuarioNombre = $cookies.get('Usuario');
 
 	$scope.sidebar = 'templates/sidebar.html';
 	$scope.tab_resumen = 'templates/Tabs_Templates/resumen.html';

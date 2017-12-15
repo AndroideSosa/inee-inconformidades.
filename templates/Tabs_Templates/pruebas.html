@@ -6,14 +6,14 @@
                 <div class="form-group">
                     <label for="inputEmail " class="col-lg-2 control-label ">Fecha de la acuerdo:</label>
                     <div class="col-lg-10 ">
-                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.desahogo" " datetime-picker date-format="yyyy-MM-dd " date-only>
                     </div>
                 </div>
                 <h5>Presunto(s) Responsable(s)</h5>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="nombre.desahogo">
                     </div>
                 </div>
                 <div class="form-group">
@@ -21,12 +21,12 @@
                     <div class="col-lg-10">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="true" ng-model="pruebaD" ng-click="activarDivPresentadas()" ng-disabled="disabled==true" > Si
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="false" ng-model="pruebaD" ng-click="activarDivPresentadasFalse()" ng-disabled="disabled==true"> No
                             </label>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                         <textarea class="form-control vertical " rows="3 " id="textArea " placeholder="Descripción... "></textarea>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-show="pruebasPresentadas==true">
                     <label for="inputEmail" class="col-lg-2 control-label">Pruebas presentadas</label>
                     <div class="col-lg-10">
                         <div class="row">
@@ -54,23 +54,90 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <button type="reset " class="btn btn-default ">Agregar otra prueba</button>
+                            <div class="col-md-4" ng-show="bandera1==true">
+                                <button type="reset " class="btn btn-default" ng-click="activarDivSegundo()">Agregar otra prueba</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-md-12 ">
-                    <a href="#!/nueva_inconformidad ">
-                        <button type="submit " class="btn btn-primary ">Guardar</button>
-                    </a>
-                    <a href="#!/ ">
+                <div class="form-group" ng-show="pruebasPresentadas2==true">
+                    <label for="inputEmail" class="col-lg-2 control-label">Pruebas presentadas</label>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                    <option value=""> Seleccione un área</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Cantidad</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Cantidad de pruebas" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera2==true">
+                                <button type="reset " class="btn btn-default" ng-click="activarDivTercero()">Agregar otra prueba</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="form-group" ng-show="pruebasPresentadas3==true">
+                    <label for="inputEmail" class="col-lg-2 control-label">Pruebas presentadas</label>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                    <option value=""> Seleccione un área</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Cantidad</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Cantidad de pruebas" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera3==true">
+                                <button type="reset " class="btn btn-default" ng-click="activarDivCuarto()">Agregar otra prueba</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-show="pruebasPresentadas4==true">
+                    <label for="inputEmail" class="col-lg-2 control-label">Pruebas presentadas</label>
+                    <div class="col-lg-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="form-control" ng-model="etapa.id" ng-options="etapa.id as etapa.tipo for etapa in tipo_Etapas" ng-disabled="mostrarDivProcedencia==true">
+                                    <option value=""> Seleccione un área</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Cantidad</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" placeholder="Cantidad de pruebas" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" ng-show="bandera4==true">
+                                <button type="reset " class="btn btn-default" >Agregar otra prueba</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 " ng-show="botonPresentadas">
+                   
+                        <button type="submit " class="btn btn-primary " ng-click="ocultarBoton()">Guardar</button>
                         <button type="reset " class="btn btn-default ">Cancelar</button>
-                    </a>
+                   
                 </div>
             </fieldset>
         </form>
-        <form class="form-horizontal placeholder-form">
+        <form class="form-horizontal placeholder-form" ng-show="estatusPrueba==true">
             <fieldset>
                 <legend>Actualización de Estatus de Pruebas</legend>
                 <h5>Presunto(s) Responsable(s)</h5>
@@ -98,17 +165,17 @@
                                 <div class="form-group">
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desaogado
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" > Desaogado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desechado
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Desechado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Pendiente
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Pendiente
                                         </label>
                                     </div>
                                 </div>
@@ -130,23 +197,23 @@
                                 <div class="form-group">
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desaogado
+                                            <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2" > Desaogado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desechado
+                                            <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2"> Desechado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Pendiente
+                                            <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2"> Pendiente
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada2 " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
                             </div>                            
                         </div>
                         <div class="row">
@@ -155,23 +222,23 @@
                                 <div class="form-group">
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desaogado
+                                            <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option3"> Desaogado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desechado
+                                            <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option3"> Desechado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Pendiente
+                                            <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option3"> Pendiente
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada3 " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
                             </div>                            
                         </div>
                         <div class="row">
@@ -180,23 +247,23 @@
                                 <div class="form-group">
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desaogado
+                                            <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4" > Desaogado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desechado
+                                            <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4"> Desechado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Pendiente
+                                            <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4"> Pendiente
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada4 " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
                             </div>                            
                         </div>
                         <div class="row">
@@ -205,43 +272,49 @@
                                 <div class="form-group">
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desaogado
+                                            <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5"> Desaogado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Desechado
+                                            <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5"> Desechado
                                         </label>
                                     </div>
                                     <div class="radio-inline">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Pendiente
+                                            <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5"> Pendiente
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                                <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada5 " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
                             </div>                            
                         </div>
                     </div>
                 </div>
+                <div class="form-group col-md-12 " ng-show="estatusPruebaBoton==true">
+                   
+                        <button type="submit " class="btn btn-primary " ng-click="ocultarBoton2()" >Guardar</button>
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                   
+                </div>
             </fieldset>
         </form>
-        <form class="form-horizontal placeholder-form">
+        <form class="form-horizontal placeholder-form" ng-show="cierreInstruccion==true">
             <fieldset>
                 <legend>Acuerdo de cierre de instrucción</legend>
                 <div class="form-group">
                     <label for="inputEmail " class="col-lg-2 control-label ">Fecha de la acuerdo:</label>
                     <div class="col-lg-10 ">
-                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only ng-disabled="mostrarDivProcedencia==true ">
+                        <input class="form-control " placeholder="Seleccione una fecha " ng-model="fecha6.seleccionada " datetime-picker date-format="yyyy-MM-dd " date-only>
                     </div>
                 </div>
                 <h5>Presunto(s) Responsable(s)</h5>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Nombre completo</label>
                     <div class="col-lg-10">
-                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="procedimiento.seleccionada" ng-disabled="mostrarDivProcedencia==true">
+                        <input type="text" class="form-control" placeholder="Nombre completo" ng-model="nombre.instruccion">
                     </div>
                 </div>
                 <div class="form-group">
@@ -249,19 +322,23 @@
                     <div class="col-lg-10">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Si
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="true" ng-model="resolucion"> Si
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> No
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="false" ng-model="resolucion"> No
                             </label>
                         </div>
                     </div>
                 </div>
+                 <div class="form-group col-md-12 " ng-show="estatusPruebaBoton2==true">
+                        <button type="submit " class="btn btn-primary " ng-click="ocultarBoton3()" >Guardar</button>
+                        <button type="reset " class="btn btn-default ">Cancelar</button>
+                </div>
             </fieldset>
         </form>
-        <form class="form-horizontal placeholder-form">
+        <form class="form-horizontal placeholder-form" ng-show="ampliacionTermino==true">
             <fieldset>
                 <legend>Ampliación de Término</legend>
                 <h5>Presunto(s) Responsable(s)</h5>
@@ -282,7 +359,7 @@
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-4 control-label">Fecha de inicio:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha7.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only>
                             </div>
                         </div>
                     </div>
@@ -290,18 +367,14 @@
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-4 control-label">Fecha de término:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only ng-disabled="mostrarDivProcedencia==true">
+                                <input class="form-control" placeholder="Seleccione una fecha" ng-model="fecha8.seleccionada" datetime-picker date-format="yyyy-MM-dd" date-only>
                             </div>
                         </div>
                     </div>
                 </div>                
-                <div class="form-group col-md-12 ">
-                    <a href="#!/nueva_inconformidad ">
-                        <button type="submit " class="btn btn-primary ">Guardar</button>
-                    </a>
-                    <a href="#!/ ">
+                <div class="form-group col-md-12 " ng-show="estatusPruebaBoton3==true">
+                        <button type="submit " class="btn btn-primary " ng-click="alert()">Guardar</button>
                         <button type="reset " class="btn btn-default ">Cancelar</button>
-                    </a>
                 </div>
             </fieldset>
         </form>
